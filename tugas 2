@@ -1,0 +1,19 @@
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) -1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] ==  target:
+            return mid
+        elif target < arr[mid]:
+            right = mid + 1
+        else:
+            left = mid + 1
+    return -1
+data = [2, 4, 6, 8, 10]
+angka_dicari = 6
+hasil = binary_search(data, angka_dicari)
+if hasil != -1:
+    print("angka", angka_dicari, "ada di indeks", hasil)
+else:
+    print("angka tidak ditemukan")
