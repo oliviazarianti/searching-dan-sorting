@@ -1,0 +1,8 @@
+text = "BELAJAR STRUKTUR DATA ITU MENYENANGKAN"
+pattern = "DATA"
+
+for i in range(len(text) - len(pattern) + 1):
+
+    if text[i:i+len(pattern)] == pattern:
+
+        print("Kata", pattern, "ketemu di index", i)
